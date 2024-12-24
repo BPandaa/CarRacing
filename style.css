@@ -1,0 +1,78 @@
+*{margin: 0;
+    padding: 0;}
+
+html, body {
+    
+    
+
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex; /* Enables Flexbox for centering */
+    justify-content: center; /* Horizontally centers child elements */
+    align-items: center; /* Vertically centers child elements */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+   
+ 
+}
+.roadmap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center; /* Centers the background image */
+    background-size: contain; /* Ensures the image scales without distortion */
+    border: 1px solid black;
+    background-image: url(./Assets/roadTrack.png);
+    background-repeat: repeat-y;
+    height: 100vh;
+    width: 20vw;
+
+}
+
+
+#obstacle {
+    position: relative;
+    background-image: url(./Assets/obstacleCar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    height: 11vh;
+    width: 3vw;
+    left: 5vw;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes move {
+    0% { top: -50vw; }
+    100% { top: 102vw; }
+}
+
+#car {
+    position: relative;
+    background: url(./Assets/mainCar.png);
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+    buttom: 0;
+    height: 11vh;
+    width: 3vw;
+    left: 1.5vw;
+}
+
+#scorecontainer{
+
+    position: absolute;
+    top: 0;
+    color: orange;
+    font-weight: bold;
+    font-size: 4vw;
+}
+#Score{
+    color: aliceblue;
+}
